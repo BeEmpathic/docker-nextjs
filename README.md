@@ -1,5 +1,7 @@
 # Docerized Next.js with hot reload
 
+This is how I have done the Docker container with node.js with next.js and hot reload with docker
+
 Everything was done on windows 11 war machine
 
 ## The required stuff to install:
