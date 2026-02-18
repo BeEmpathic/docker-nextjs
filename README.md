@@ -162,7 +162,7 @@ nodejs-sample-kubernetes.yaml
 
 ## Run docker compose up --watch
 
-now you run:
+now you run (and make sure that docker is on other wise you will get some wierd errors):
 
 ```bash
 docker compose up --watch
