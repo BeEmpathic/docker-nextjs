@@ -10,10 +10,11 @@ services:
   environment:
     NODE_ENV: development
     DOCKER_ENV: "true"
+  # This is for some old version of hot reloads called binding
   # volumes:
   #   - ./app:/file-validation/app:ro
   #   - ./package.json:/file-validation/package.json
-  command: npm run dev:docker
+  command: npm run dev
   develop:
     watch:
     - action: sync

@@ -1,13 +1,12 @@
 FROM node:22-alpine3.22 AS base 
 
-RUN apk add --no-cache libc6-compat
-
 WORKDIR /file-validation
 
 FROM base AS deps 
 
 COPY package.json ./
 
+# for some reason if you don't copy the package-lock.json it doesn't work
 COPY package-lock.json ./
 
 RUN --mount=type=cache,target=/root/.npm,sharing=locked \
@@ -24,4 +23,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "run", "dev:docker"]
+CMD ["npm", "run", "dev"]
