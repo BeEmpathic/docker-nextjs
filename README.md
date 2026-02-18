@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Everything was done on windows 11 war machine
+
+To recreate it without clonning it you will need to have installed:
+
+- node.js
+- docker desktop (maybe there is better version)
 
 ## Getting Started
 

@@ -1,0 +1,25 @@
+services:
+ file-validation-dev2:
+  build:
+   context: .
+   dockerfile: Dockerfile
+   target: development
+  container_name: file-validation-dev2
+  ports:
+    - 3000:3000
+  environment:
+    NODE_ENV: development
+    DOCKER_ENV: "true"
+  # volumes:
+  #   - ./app:/file-validation/app:ro
+  #   - ./package.json:/file-validation/package.json
+  command: npm run dev:docker
+  develop:
+    watch:
+    - action: sync
+      path: ./app
+      target: /file-validation/app
+    - action: rebuild
+      path: ./package.json
+  restart: unless-stopped
+
