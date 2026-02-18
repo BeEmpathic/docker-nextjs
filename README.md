@@ -2,7 +2,7 @@
 
 Everything was done on windows 11 war machine
 
-## the required stuff to install:
+## The required stuff to install:
 
 To recreate it without clonning it you will need to have installed:
 
@@ -50,7 +50,7 @@ Is not that important, but I should reduce size of next.js in the container and 
 
 Then you can do: docker init, but I did all stuff manually
 
-## create compose.yml
+## Create compose.yml
 
 ```yml
 services:
@@ -162,7 +162,7 @@ nodejs-sample-kubernetes.yaml
 !tsconfig.json
 ```
 
-## RUN docker compose up --watch
+## Run docker compose up --watch
 
 now you run:
 
