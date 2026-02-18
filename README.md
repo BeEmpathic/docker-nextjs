@@ -9,8 +9,6 @@ To recreate it without clonning it you will need to have installed:
 - node.js
 - docker desktop (maybe there is better version)
 
-## First step
-
 ## First create the next.js app by running:
 
 ```bash
