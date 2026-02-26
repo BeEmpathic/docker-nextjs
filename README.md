@@ -162,12 +162,12 @@ nodejs-sample-kubernetes.yaml
 !tsconfig.json
 ```
 
-## Run docker compose up --watch
+## Run docker compose up --build --watch
 
 now you run (and make sure that docker is on other wise you will get some wierd errors):
 
 ```bash
-docker compose up --watch
+docker compose up --build --watch
 ```
 
 After that the stuff should be working and everything in directory app should be auto synced / pulled in to your docker container
