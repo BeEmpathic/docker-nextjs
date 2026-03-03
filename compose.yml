@@ -20,6 +20,7 @@ services:
     - action: sync
       path: ./app
       target: /file-validation/app
+      intial_sync: true
     - action: rebuild
       path: ./package.json
   restart: unless-stopped
