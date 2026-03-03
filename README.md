@@ -75,6 +75,7 @@ services:
         - action: sync
           path: ./app
           target: /file-validation/app
+          initial_sync: true
         - action: rebuild
           path: ./package.json
     restart: unless-stopped
@@ -166,9 +167,18 @@ nodejs-sample-kubernetes.yaml
 
 now you run (and make sure that docker is on other wise you will get some wierd errors):
 
+### as first run do:
 ```bash
 docker compose up --build --watch
 ```
+### every other time when you didn't change Dockerfile or compose.yml file you should use:
+```bash
+docker compose up --watch
+```
+Apparently everytime you use: "docker compose up --build" it creates another build of your container which will take around 1GB of space from you hard drive every time you run it.
+
+### to make docker compose up --watch work
+For: "docker compose up --watch" is worth mentioning that you need the initial sync in the compose.yml file
 
 After that the stuff should be working and everything in directory app should be auto synced / pulled in to your docker container
 
